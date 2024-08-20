@@ -1,12 +1,11 @@
-import styled, { css } from 'styled-components';
-import SocialIcons from '@/modules/login/components/socialIcons';
+import styled, { css } from 'styled-components'
+import SocialIcons from '@/modules/login/components/SocialIcons'
 
 //provider = provedores
 interface ButtonProps {
-  $provider: 'google' | 'github' | 'facebook' | 'default'; // aqui eu coloquei 3 provedores para que cada um tenha seu estilo depois
-  children: React.ReactNode;
+  $provider: 'google' | 'github' | 'facebook' | 'default' // aqui eu coloquei 3 provedores para que cada um tenha seu estilo depois
+  children: React.ReactNode
 }
-
 
 const providerStyles = {
   //Uitilizei a função css`` para implementar blocos de estilização nos providers
@@ -15,7 +14,7 @@ const providerStyles = {
     color: black;
 
     &:hover {
-      background-color: #D3D3D3;
+      background-color: #d3d3d3;
     }
   `,
   github: css`
@@ -39,15 +38,14 @@ const providerStyles = {
     color: black;
 
     &:hover {
-      background-color: #D3D3D3;
+      background-color: #d3d3d3;
     }
-  `
-};
-
+  `,
+}
 
 const StyledButton = styled.button<ButtonProps>`
-  width: 400px;  
-  height: 45px;  
+  width: 400px;
+  height: 45px;
   padding: 8px 16px;
 
   border: none;
@@ -56,26 +54,26 @@ const StyledButton = styled.button<ButtonProps>`
   text-shadow: none;
 
   cursor: pointer;
-  
+
   font-size: 16px;
   font-weight: 700;
 
   display: flex;
-  
+
   justify-content: center;
   align-items: center;
   gap: 15px;
-    
-  ${({ $provider }) => providerStyles[$provider]}
-`;
 
+  ${({ $provider }) => providerStyles[$provider]}
+`
 
 const Button: React.FC<ButtonProps> = ({ $provider, children }) => {
   return (
     <StyledButton $provider={$provider}>
-      <SocialIcons $provider={$provider}/>{children}
+      <SocialIcons $provider={$provider} />
+      {children}
     </StyledButton>
   )
-};
+}
 
-export default Button;
+export default Button

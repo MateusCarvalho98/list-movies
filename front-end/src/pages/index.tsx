@@ -1,11 +1,8 @@
 import React from 'react'
-import Login from "@/modules/login/login"
-
+import Login from '@/modules/login/login'
 
 const MyApp: React.FC = () => {
-  return (
-    <Login/>
-  )
-};
+  return <Login />
+}
 
-export default MyApp;
+export default MyApp

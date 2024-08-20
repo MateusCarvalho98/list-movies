@@ -1,3 +1,32 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "eslint-config-prettier",
+    "next"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "no-undef": "off",
+    "indent": ["error", 2, { "SwitchCase": 1 }]
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  }
 }
