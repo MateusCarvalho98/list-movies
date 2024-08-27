@@ -1,0 +1,20 @@
+root = true
+
+[*]
+# Definir indentação de espaço e tamanho
+indent_style = space
+indent_size = 2
+
+# Final de linha e codificação de arquivo
+end_of_line = lf
+charset = utf-8
+
+# Inserir nova linha ao final de arquivos
+insert_final_newline = true
+
+# Remover espaços em branco no final das linhas
+trim_trailing_whitespace = true
+
+[*.md]
+# Arquivos Markdown (exceção)
+trim_trailing_whitespace = false
